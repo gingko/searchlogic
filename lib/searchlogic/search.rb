@@ -61,7 +61,7 @@ module Searchlogic
     end
     
     def compact_conditions
-      conditions.select { |k,v| !v.blank? }
+      conditions.reject { |k,v| v.blank? }
     end
     
     # Accepts a hash of conditions.
